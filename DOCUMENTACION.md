@@ -9,14 +9,14 @@ En este documento expondré los pasos realizados y herramientas utilizadas para 
 
 
 <br>
-<h3>En que consiste</h3>  
-En la presenta práctica he creado dos máquinas virtuales básicas (debian7 y ubuntu1310) a partir de las cuales he ido modificando sus propiedades (ram y cpu) para ver como varía su comportamiento frente a las distintas peticiones desde la máquina anfitriona a la aplicación que servirán dichas máquinas virtuales.
+<h3>En que consiste</h3>
+En la presenta práctica he creado dos máquinas virtuales básicas (debian7 y ubuntu1310) a partir de las cuales he ido modificando sus propiedades (ram y cpu) para ver como varía su comportamiento frente a las distintas peticiones desde la máquina anfitriona a la aplicación que servirán dichas máquinas.
 
 <br>
 <h3>La aplicación</h3>
-Para complementar la práctica he realizado una aplicación en python donde se pueden realizar una serie de acciones tales como inicio de sesión, registros de nuevos usuarios, búsqueda de usuarios, etc. La aplicación trabaja sobre una base de datos no relacional como es **mongodb** donde se almacena los datos de los nuevos usuarios. Toda la implementación de la aplicación esta basada sobre el marco **webpy** que no es mas que un framework para Python de uso sencillo pero lo suficientemente potente para permitir desarrollar una aplicación web en poco tiempo.
+Para complementar la práctica he realizado una aplicación web en python donde se pueden realizar una serie de acciones tales como inicio de sesión, registros de nuevos usuarios, búsqueda de usuarios, etc. La aplicación trabaja sobre una base de datos no relacional como es **mongodb** donde se almacena los datos de los nuevos usuarios. Toda la implementación de la aplicación esta basada sobre el marco **webpy** que no es mas que un framework para Python de uso sencillo pero lo suficientemente potente para permitir desarrollar una aplicación web en poco tiempo.
 
-<br>*
+<br>
 <h3>Máquinas Virtuales</h3>
 Como he indicado anteriormente, me he creado dos máquinas virtuales, a las que les he ido modificando propiedades tanto de cpu como de memoria. Para la creación de ambas he usado **vmware** ya que **virtualbox**  no me terminaba de arrancar en mi máquina, y con **windows azure** he tenido problemas para acceder a la máquina virtual creada alli debido a la verificación de claves ssh.
 
@@ -78,12 +78,12 @@ No obstante, a esta máquina virtual también le he realizado las mismas modific
 <h3>Servicios utilizados</h3>
 Para echar a andar la aplicación en cualquiera de las máquinas virtuales creadas, hay que instalar una serie de servicios que son de vital importancia para que el programa funcione correctamente. En este caso para cada máquina virtual he instalado las siguiente aplicaciones:
 
-* **git:** mediante la cual me descargo de los repositorios correspondiente otras aplicaciones como son **webpy** y **pymongo.**
+* **git:** mediante la cual me descargo de los repositorios correspondiente a otras aplicaciones como son **webpy** y **pymongo.**
 
 ![imagen148](https://github.com/jmanday/Imagenes/blob/master/imagen148.png?raw=true)
 
 	
-* **webpy:** framework para Python el cual me la descargo de su repositorio y la instalo:
+* **webpy:** framework para Python el cual me lo descargo de su repositorio y la instalo:
 
 ![imagen149](https://github.com/jmanday/Imagenes/blob/master/imagen149.png?raw=true)
 
@@ -102,7 +102,7 @@ Para echar a andar la aplicación en cualquiera de las máquinas virtuales cread
 ![imagen153](https://github.com/jmanday/Imagenes/blob/master/imagen153.png?raw=true)
 
 
-Cabe indicar que aunque las imagenes sólo sea de las instalaciones en una máquina virtual, por evitar duplicar información he obviado poner también las de **Debian7** ya que es exacamente lo mismo.
+Cabe indicar que sólo muestro las imagenes de las instalaciones de las herramientas en una máquina virtual por evitar duplicar información, ya que he obviado poner también las de **Debian7** debido que es exacamente lo mismo.
 
 
 <br>
@@ -161,5 +161,5 @@ En estas gráficas muestro el porcentaje de peticiones atendidas en un determina
 
 <br>
 <h3>Conclusiones</h3>
-Tras este estudio realizado se puede llegar a la conclusión de que no porque una máquina disponga de más soporte hardware va a prestar mejores servicios y responder mejor que otra que disponga de menos, sino que dependerá del sistema operativo sobre el que actúe. Hemos visto como si montamos nuestra aplicación sobre una máquina con **Ubuntu1310** a medida que vaya aumentando la capacidad de la misma (tanto en memoria como en procesadores), irán mejorando los tiempo de respuesta, algo directamente proporcional. Sin embargo cuando la aplicación ha sido montada sobe una máquina con **Debian7** no ha sido así, sino que depende solo un aumento de las capacidades.
+Tras este estudio realizado se puede llegar a la conclusión de que no porque una máquina disponga de más soporte hardware va a prestar mejores servicios y responder mejor que otra que disponga de menos, sino que dependerá del sistema operativo sobre el que actúe. Hemos visto como si montamos nuestra aplicación sobre una máquina con **Ubuntu1310** a medida que vaya aumentando la capacidad de la misma (tanto en memoria como en procesadores), irán mejorando los tiempo de respuesta, directamente proporcional. Sin embargo cuando la aplicación ha sido montada sobe una máquina con **Debian7** no ha sido así, sino que da mejores resultados con capacidades inferiores (algo que viene muy bien para el tema económico €€.
 Para acabar, como opinión personal y después de ver los resultados obtenidos me quedaría con **Debian7** para echar a rodar mi aplicación.
